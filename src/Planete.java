@@ -1,8 +1,6 @@
-public class Planete {
+public abstract class Planete {
     String nom;
-    String matiere;
     long diametre;
-    int tours;
     Atmosphere atmosphere;
     static String forme = "Sphérique";
     static int nbPlanetesDecouvertes;
