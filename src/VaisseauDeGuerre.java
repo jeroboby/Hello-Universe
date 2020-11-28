@@ -2,14 +2,18 @@ public class VaisseauDeGuerre extends Vaisseau{
 
     boolean armesDesactivees;
 
-    VaisseauDeGuerre(String type) {
+    VaisseauDeGuerre(TypeVaisseau type) {
         super.type = type;
-        if(type.equals("CHASSEUR")) {
-            tonnageMax = 0;
-        } else if(type.equals("FREGATE")) {
-            tonnageMax = 50;
-        } else if (type.equals("CROISEUR")) {
-            tonnageMax = 100;
+        switch (type) {
+            case CHASSEUR:
+                tonnageMax = 0;
+                break;
+            case FREGATE:
+                tonnageMax = 50;
+                break;
+            case CROISEUR:
+                tonnageMax = 100;
+                break;
         }
     }
 

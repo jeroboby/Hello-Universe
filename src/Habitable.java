@@ -1,4 +1,4 @@
 public interface Habitable {
 
-    public Vaisseau accueillirVaisseau(Vaisseau nouveauVaisseau);
+    public void accueillirVaisseau(Vaisseau nouveauVaisseau);
 }
