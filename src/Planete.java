@@ -1,7 +1,8 @@
-public abstract class Planete {
+public abstract class Planete implements Comparable {
     String nom;
     long diametre;
     Atmosphere atmosphere;
+    float distanceEtoile;
     static String forme = "Sphérique";
     static int nbPlanetesDecouvertes;
 
@@ -25,5 +26,11 @@ public abstract class Planete {
         } else {
             System.out.println("Je rêve ou c'est plus rapide que la lumière ?");
         }
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Planete autrePlanete = (Planete)o;
+        return ((Float)distanceEtoile).compareTo(autrePlanete.distanceEtoile);
     }
 }
