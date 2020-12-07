@@ -1,9 +1,11 @@
+package com.espacex.decouverte.enginsspaciaux;
+
 public class VaisseauDeGuerre extends Vaisseau{
 
-    boolean armesDesactivees;
+    private boolean armesDesactivees;
 
-    VaisseauDeGuerre(TypeVaisseau type) {
-        super.type = type;
+    public VaisseauDeGuerre(TypeVaisseau type) {
+        super(type);
         switch (type) {
             case CHASSEUR:
                 tonnageMax = 0;
@@ -53,8 +55,12 @@ public class VaisseauDeGuerre extends Vaisseau{
     }
 
 
-    void desactiverArmes() {
+    public void desactiverArmes() {
         armesDesactivees = true;
         System.out.println("Desactivation des armes d'un vaisseau de type "+ type);
+    }
+
+    public void activerArmes() {
+        armesDesactivees = false;
     }
 }

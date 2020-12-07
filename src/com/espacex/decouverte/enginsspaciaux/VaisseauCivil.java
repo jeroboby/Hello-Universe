@@ -1,7 +1,9 @@
+package com.espacex.decouverte.enginsspaciaux;
+
 public class VaisseauCivil extends Vaisseau{
 
     VaisseauCivil(TypeVaisseau type) {
-        super.type = type;
+        super(type);
         switch (type) {
             case CARGO:
                 tonnageMax = 500;

@@ -1,10 +1,16 @@
+package com.espacex.decouverte.enginsspaciaux;
+
 public abstract class Vaisseau {
-    TypeVaisseau type;
-    int nbPassagers;
+    public final TypeVaisseau type;
+    public int nbPassagers;
     int blindage;
     int resistanceDuBouclier;
     int tonnageMax;
-    int tonnageActuel;
+    protected int tonnageActuel;
+
+    protected Vaisseau(TypeVaisseau type) {
+        this.type = type;
+    }
 
     void desactiverBouclier() {
         System.out.println("Désactivation du bouclier d'un vaisseau de type "+type);
@@ -14,5 +20,5 @@ public abstract class Vaisseau {
         System.out.println("Activation du bouclier d'un vaisseau de type "+ type);
     }
 
-    abstract int emporterCargaison(int tonnage);
+    public abstract int emporterCargaison(int tonnage);
 }

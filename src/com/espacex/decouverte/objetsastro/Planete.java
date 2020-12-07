@@ -1,8 +1,10 @@
+package com.espacex.decouverte.objetsastro;
+
 public abstract class Planete implements Comparable {
-    String nom;
-    long diametre;
-    Atmosphere atmosphere;
-    float distanceEtoile;
+    public String nom;
+    public long diametre;
+    public Atmosphere atmosphere;
+    public float distanceEtoile;
     static String forme = "Sphérique";
     static int nbPlanetesDecouvertes;
 
@@ -11,11 +13,11 @@ public abstract class Planete implements Comparable {
         nbPlanetesDecouvertes++;
     }
 
-    int revolution(int angle) {
+    final int revolution(int angle) {
         return angle/360;
     }
 
-    int rotation(int angle) {
+    final int rotation(int angle) {
         return angle/360;
     }
 

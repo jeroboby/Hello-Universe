@@ -1,3 +1,10 @@
+package com.espacex.decouverte.objetsastro;
+
+import com.espacex.decouverte.enginsspaciaux.TypeVaisseau;
+import com.espacex.decouverte.enginsspaciaux.Vaisseau;
+import com.espacex.decouverte.enginsspaciaux.VaisseauDeGuerre;
+import com.espacex.decouverte.objetsastro.Planete;
+
 public class PlaneteTellurique extends Planete implements Habitable {
 
     int totalVisiteurs;
@@ -39,7 +46,7 @@ public class PlaneteTellurique extends Planete implements Habitable {
 
     }
 
-    boolean restePlaceDisponible(Vaisseau vaisseau) {
+    public boolean restePlaceDisponible(Vaisseau vaisseau) {
 
         int indexZone=0;
 

@@ -1,3 +1,14 @@
+import static com.espacex.decouverte.enginsspaciaux.TypeVaisseau.FREGATE;
+import static com.espacex.decouverte.enginsspaciaux.TypeVaisseau.CARGO;
+import static com.espacex.decouverte.enginsspaciaux.TypeVaisseau.VAISSEAU_MONDE;
+import static com.espacex.decouverte.enginsspaciaux.TypeVaisseau.CHASSEUR;
+import static com.espacex.decouverte.enginsspaciaux.TypeVaisseau.CROISEUR;
+
+import com.espacex.decouverte.enginsspaciaux.TypeVaisseau;
+import com.espacex.decouverte.enginsspaciaux.Vaisseau;
+import com.espacex.decouverte.enginsspaciaux.VaisseauDeGuerre;
+import com.espacex.decouverte.objetsastro.*;
+
 import java.util.*;
 
 public class HelloUniverse {
@@ -68,24 +79,24 @@ public class HelloUniverse {
             System.out.println(constituant.getValue() +"% de " +constituant.getKey());
         }
 
-        Vaisseau chasseur = new VaisseauDeGuerre(TypeVaisseau.CHASSEUR);
+        Vaisseau chasseur = new VaisseauDeGuerre(CHASSEUR);
         chasseur.nbPassagers = 2;
 
-        Vaisseau fregate = new VaisseauDeGuerre(TypeVaisseau.FREGATE);
+        Vaisseau fregate = new VaisseauDeGuerre(FREGATE);
         fregate.nbPassagers = 25;
 
-        Vaisseau croiseur = new VaisseauDeGuerre(TypeVaisseau.CROISEUR);
+        Vaisseau croiseur = new VaisseauDeGuerre(CROISEUR);
         croiseur.nbPassagers = 100;
 
-        Vaisseau cargo = new VaisseauDeGuerre(TypeVaisseau.CARGO);
+        Vaisseau cargo = new VaisseauDeGuerre(CARGO);
         cargo.nbPassagers = 500;
 
-        Vaisseau vaisseauMonde = new VaisseauDeGuerre(TypeVaisseau.VAISSEAU_MONDE);
+        Vaisseau vaisseauMonde = new VaisseauDeGuerre(VAISSEAU_MONDE);
         vaisseauMonde.nbPassagers = 1000;
 
-        Vaisseau chasseur1 = new VaisseauDeGuerre(TypeVaisseau.CHASSEUR);
-        Vaisseau chasseur2 = new VaisseauDeGuerre(TypeVaisseau.CHASSEUR);
-        Vaisseau cargo1 = new VaisseauDeGuerre(TypeVaisseau.CARGO);
+        Vaisseau chasseur1 = new VaisseauDeGuerre(CHASSEUR);
+        Vaisseau chasseur2 = new VaisseauDeGuerre(CHASSEUR);
+        Vaisseau cargo1 = new VaisseauDeGuerre(CARGO);
 
         terre.accueillirVaisseaux(chasseur1, chasseur2, cargo1);
 
